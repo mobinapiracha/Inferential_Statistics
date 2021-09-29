@@ -13,36 +13,36 @@ Since this analysis consists of large amount of detail, in order to provide a su
 
 * In regards to confidence in religion We find that from 1973 to 2002, the trend has changed. In 1973 almost 40% of Americans had a great deal of confidence in organized religion, while another 47 % had some confidence and 14% had hardly any confidence in organized religion. By 2002 these figures had changed with a large decrease in Americans who have a great deal in confidence in organized religion from 39% to 21%, while only some confidence increase by 13% to 60% and hardly any confidence increase 4% to 18%. By 2012, there was a slight increase in proportion of Americans who had a great of confidence in organized religion from 21% to 26%, and only some decreased by 3% and hardly any remained unchanged. Overall from 1973 to 2012 there has been an overall decrease in a great deal of confidence in organized religion while other categories have increased.
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
 
 * Now we turn our attention to education levels. The line graph in 1973 starts with a large gap with a very small portion of Americans with bachelor’s degrees or higher, overtime however, we see a convergence between the two lines No bachelor’s and bachelor’s or more. We find that overtime that number of people who have a bachelors degree of higher increases from somewhere around 10% to around 30% while the number of people with lower than bachelor’s degree decreases from almost 90% in 1973 to 70% in 2012. If we talk about bachelor's degree attainment by gender overtime, we see a significant rise in degree attainment for females overtime. In regards to race, we see a gradual rise for white bachelor's degree attainment, while black bachelor's degree attainment remained significantly low until 2012 when we saw a dramatic 8% increase from 12.5% to 20%. 
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
 
 ### Inferential Statistics 
 * We conduct a hypothesis test to find out if mean education in United States is greater than mean education in Australia and Canada in 1973. We conduct the hypothesis test and our p-value is lower than 0.05 so we reject the null hypothesis and we find that there is evidence that shows mean education in the United States in 1973 was greater than mean education in Australia and Canada in 1973. 
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
 
 * Now we conduct a hypothesis test for two means to find if education levels for males is greater than females, and we do this for both 1973 and 2012. We find that there is no significant difference in education levels for male and females in both 1973 and 2012, we fail to reject the null hypothesis. 
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
 
 * We conduct an analysis of variance to find if education levels are different based on race. Our null hypothesis states that education levels are same across all three categories while our alternative states that it is not same across all three categories. We conduct this test for 2012 and we find that there is significant difference between education levels between black and white race categories. We conduct a pairwise comparison and we find that all pairwise difference have a p value lower than 0.05 except for the other-black category. 
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
 
 * Now we turn towards inference between two proportions. We conduct a hypothesis test for proportions to find if the proportion of Americans with bachelor’s degrees is greater than Canadians and Germans in year 2012. We find that for Canada, there is convincing evidence that American bachelor’s degree attainment is greater than Canada. In the case of Germany, we fail to reject the null hypothesis and find that there is convincing evidence that American bachelor’s degree attainment is not greater than Germany.
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
 
 * Now, we conduct a hypothesus test of two sample proportions and find if there is a relationship between bachelor’s degree attainment and party ID (for simplicity we will assume that there are only two parties: Democratic and Republican Party and delete all other observations). After estimating difference between two proportions we find that for year 2012, the confidence intervals show that there is not a significant difference between bachelor’s degree attainment for democrats and republicans. We have a 95% confidence interval of 95% CI (Democrat - Republican): (-0.0578 , 0.0373). Since our confidence intervals does include 0, we find that this difference is insignificant. We can verify that by conducting a hypothesis test which is highly insignificant with a p-value greater than 0.05. Therefore, we fail to reject the null hypothesis, there is not a significant difference in bachelor’s degree attainment for democrats and republicans.
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
 
 * Finally we conduct our chi-squared test of independence to find if there is a relationship between bachelor's degree attainment and racial identification. Our null hypothesis states that there is no relationship between bachelor’s degree attainment and race, while our alternative hypothesis states that there is a relationship between bachelor’s degree attainment and race. In both cases. we have a high chi-square statistic and low p-value for years 2002 and 2012. Therefore, we reject the null hypothesis, there is convincing evidence that bachelor’s degree attainment is not independent of race in both years. We visualize our pearson residuals and we find that these residuals are highest for black and white races while “other” race seems to have the lowest residuals and therefore is closest to the average degree attainment. Residuals are highest for individuals who identify as black, then white, with lowest residuals being for individuals who identify as other. The patterns are similar for both 2002 and 2012 with residuals being higher 2002 than 2012.
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
 
 ### Conclusion
 Therefore, we conducted analysis on GSS survey data and revealed a number of insights on a number of years finding patterns overtime such as religious identification change overtime, differences in religious attendance in 1973 and 2012, 10 year changes in confidence in religion from 1973 to 2012, bachelor’s degree attainment overtime, confidence in education overtime. We used a number of visualizetion and plots, allowing us to do exploratory data analysis and allowing us to hypothesize relationship between different variables. We conducted inference on these variables such as comparing mean education levels in US to other countries, finding confidence intervals for education levels in years 1973 and 2012 to see change in education levels, conducting inference to determine relationships between education and sex, conducting an Analysis of Variance to determine relationship between education level and race and conducting a pairwise comparison. We conducted single proportion hypothesis tests comparing bachelor’s degree attainment of US to other countries, conducting independent two sample proportion hypothesis test to compare change in bachelor’s degree attainment from 2002 to 2012, comparing two sample proportions hypothesis to find if bachelor’s degree is different for democrats and republicans, and lastly we conduct a chi-square test to find out whether there a relationship between race and bachelor’s degree attainment. Through Exploratory Data Analysis and Inference, I have answered several questions and established relationship between a number of variables in the survey. Whether correlation is causation, we will find out through regression analysis.
