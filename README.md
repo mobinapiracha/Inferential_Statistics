@@ -9,15 +9,18 @@ Since this analysis consists of large amount of detail, in order to provide a su
 ### Exploratory Analysis
 * We created a stacked bar chart to show how change in religious representation in years 1973, 1982, 2002 and 2012. We see that by 2002, most likely due to trends in immigration, we’ve seen an increase in other religions such as Orthodox Christianity, Moslem, Buddhism, Hinduism etc. We believe reduction in Protestants in the sample could be due to two reasons, increase in other religions due to immigration and could also be due to more people affiliating themselves with no religion which can be seen in the chart as the people who are affiliated with no religion has increased. Therefore, over the years the United States has become more diverse in terms of religious representation and many people have also become unaffiliated with religion which shows the prevalance of Atheism.
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](tat_inf_project_files/figure-gfm/unnamed-chunk-4-2.png "This is a sample image.")
 
 * In regards to confidence in religion We find that from 1973 to 2002, the trend has changed. In 1973 almost 40% of Americans had a great deal of confidence in organized religion, while another 47 % had some confidence and 14% had hardly any confidence in organized religion. By 2002 these figures had changed with a large decrease in Americans who have a great deal in confidence in organized religion from 39% to 21%, while only some confidence increase by 13% to 60% and hardly any confidence increase 4% to 18%. By 2012, there was a slight increase in proportion of Americans who had a great of confidence in organized religion from 21% to 26%, and only some decreased by 3% and hardly any remained unchanged. Overall from 1973 to 2012 there has been an overall decrease in a great deal of confidence in organized religion while other categories have increased.
 
-![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/unnamed-chunk-6-1.png "This is a sample image.")
 
 * Now we turn our attention to education levels. The line graph in 1973 starts with a large gap with a very small portion of Americans with bachelor’s degrees or higher, overtime however, we see a convergence between the two lines No bachelor’s and bachelor’s or more. We find that overtime that number of people who have a bachelors degree of higher increases from somewhere around 10% to around 30% while the number of people with lower than bachelor’s degree decreases from almost 90% in 1973 to 70% in 2012. If we talk about bachelor's degree attainment by gender overtime, we see a significant rise in degree attainment for females overtime. In regards to race, we see a gradual rise for white bachelor's degree attainment, while black bachelor's degree attainment remained significantly low until 2012 when we saw a dramatic 8% increase from 12.5% to 20%. 
 
-![This is a alt text.](stat_inf_project_files/figure-gfm/ "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/unnamed-chunk-8-1.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/unnamed-chunk-9-1.png "This is a sample image.")
+![This is a alt text.](stat_inf_project_files/figure-gfm/unnamed-chunk-10-1.png "This is a sample image.")
+
 
 ### Inferential Statistics 
 * We conduct a hypothesis test to find out if mean education in United States is greater than mean education in Australia and Canada in 1973. We conduct the hypothesis test and our p-value is lower than 0.05 so we reject the null hypothesis and we find that there is evidence that shows mean education in the United States in 1973 was greater than mean education in Australia and Canada in 1973. 
