@@ -11,14 +11,29 @@ Mobin Piracha
 library(tidyverse)
 ```
 
-    ## Warning: package 'tidyr' was built under R version 4.0.3
+    ## Warning: package 'tibble' was built under R version 4.0.5
 
-    ## Warning: package 'readr' was built under R version 4.0.3
+    ## Warning: package 'tidyr' was built under R version 4.0.5
+
+    ## Warning: package 'dplyr' was built under R version 4.0.5
+
+    ## Warning: package 'forcats' was built under R version 4.0.5
 
 ``` r
 library(statsr)
+```
+
+    ## Warning: package 'statsr' was built under R version 4.0.5
+
+    ## Warning: package 'BayesFactor' was built under R version 4.0.5
+
+    ## Warning: package 'coda' was built under R version 4.0.5
+
+``` r
 library(ggthemes)
 ```
+
+    ## Warning: package 'ggthemes' was built under R version 4.0.5
 
 ### Load Data
 
@@ -184,7 +199,7 @@ linegraphdata <- gss_eda_1 %>%
       mutate(freq = relig_count / sum(relig_count))
 ```
 
-    ## `summarise()` regrouping output by 'year' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 ggplot(data = linegraphdata, mapping = aes(x = year, y = freq, color = relig)) +
@@ -203,7 +218,7 @@ religion_year_change <- gss_eda_1_change %>%
     mutate(freq = count / sum(count))
 ```
 
-    ## `summarise()` regrouping output by 'year' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 ggplot(data = religion_year_change, aes(fill = relig, x = as.factor(year), y = freq)) +
@@ -275,11 +290,7 @@ attendance_1973 <- attendance %>%
   group_by(attend) %>% 
   summarise(count = n()) %>% 
   mutate(proportion = count/sum(count)*100)
-```
 
-    ## `summarise()` ungrouping output (override with `.groups` argument)
-
-``` r
 summary(attendance_1973)
 ```
 
@@ -310,11 +321,7 @@ attendance_2012 <- attendance %>%
   group_by(attend) %>% 
   summarise(count = n()) %>% 
   mutate(proportion = count/sum(count)*100)
-```
 
-    ## `summarise()` ungrouping output (override with `.groups` argument)
-
-``` r
 summary(attendance_2012)
 ```
 
@@ -369,7 +376,7 @@ confidence_in_orgreligion <- gss_eda_1 %>%
   filter(year %in% c(1973,1982,2002,2012))
 ```
 
-    ## `summarise()` regrouping output by 'year' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 ggplot(data = confidence_in_orgreligion, aes(fill = conclerg, x = as.factor(year), y = Proportion_of_Confidence)) +
@@ -436,7 +443,7 @@ usbachelor_1 <- usbachelor %>%
   mutate(percentage_with_bachelor = count/sum(count))
 ```
 
-    ## `summarise()` regrouping output by 'year' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 ggplot(data = usbachelor_1, mapping = aes(x = year, y = percentage_with_bachelor, color = bachelor_or_higher)) +
@@ -457,7 +464,7 @@ usbachelor_10yr <- usbachelor %>%
   mutate(percentage_with_bachelor = count/sum(count)*100)
 ```
 
-    ## `summarise()` regrouping output by 'year' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 usbachelor_10yr
@@ -524,7 +531,7 @@ usbachelor_gender <- usbachelor %>%
   mutate(percentage_with_bachelor = count/sum(count)*100)
 ```
 
-    ## `summarise()` regrouping output by 'year', 'bachelor_or_higher' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year', 'bachelor_or_higher'. You can override using the `.groups` argument.
 
 ``` r
 usbachelor_gender
@@ -608,7 +615,7 @@ usbachelor_race <- usbachelor %>%
   mutate(percentage_with_bachelor = count/sum(count)*100) 
 ```
 
-    ## `summarise()` regrouping output by 'year', 'bachelor_or_higher' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year', 'bachelor_or_higher'. You can override using the `.groups` argument.
 
 ``` r
 ggplot(usbachelor_race, aes(x = race, y = percentage_with_bachelor))+
@@ -674,11 +681,8 @@ useducation_1 <- useducation_1 %>%
   select(year, educ, coneduc) %>% 
   group_by(year) %>% 
   summarise(mean_education = mean(educ), mean_coneduc = mean(as.numeric(coneduc)))
-```
 
-    ## `summarise()` ungrouping output (override with `.groups` argument)
 
-``` r
 ggplot(data = useducation_1, mapping = aes(x = year, y = mean_education, color = mean_education)) +
   geom_line()+
     xlab("Year") +
@@ -728,7 +732,7 @@ useducation_2 <- useducation %>%
   filter(year %in% c(1973,1982,1993,2000,2012))
 ```
 
-    ## `summarise()` regrouping output by 'year' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 ggplot(data = useducation_2, mapping = aes(x = factor(year) , y = percent_coneduc, fill = coneduc)) +
@@ -787,7 +791,7 @@ useducation_3_1 <- useducation_3  %>%
   summarise(mean_education = mean(educ))
 ```
 
-    ## `summarise()` regrouping output by 'year' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 ggplot(data = useducation_3_1, mapping = aes(x= coneduc, y = mean_education, fill = coneduc)) +
@@ -1424,8 +1428,6 @@ gss_inference_2_1_1 %>%
   mutate(proportion = count/sum(count)*100)
 ```
 
-    ## `summarise()` ungrouping output (override with `.groups` argument)
-
     ## # A tibble: 2 x 3
     ##   bachelor_or_higher count proportion
     ##   <fct>              <int>      <dbl>
@@ -1692,7 +1694,7 @@ gss_inference_2_1_3_2 %>%
   mutate(proportion = count/sum(count)*100)
 ```
 
-    ## `summarise()` regrouping output by 'year', 'bachelor_or_higher' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year', 'bachelor_or_higher'. You can override using the `.groups` argument.
 
     ## # A tibble: 4 x 5
     ## # Groups:   partyid_2 [2]
@@ -1751,7 +1753,7 @@ gss_inference_2_1_3_3 %>%
   mutate(proportion = count/sum(count)*100)
 ```
 
-    ## `summarise()` regrouping output by 'year', 'bachelor_or_higher' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'year', 'bachelor_or_higher'. You can override using the `.groups` argument.
 
     ## # A tibble: 4 x 5
     ## # Groups:   partyid_2 [2]
@@ -1925,7 +1927,7 @@ gss_inference_2_2_1_2 %>%
   mutate(prop = count/sum(count)*100)
 ```
 
-    ## `summarise()` regrouping output by 'bachelor_or_higher' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'bachelor_or_higher'. You can override using the `.groups` argument.
 
     ## # A tibble: 6 x 4
     ## # Groups:   race [3]
@@ -1948,7 +1950,7 @@ gss_inference_2_2_1_3 %>%
   mutate(prop = count/sum(count)*100)
 ```
 
-    ## `summarise()` regrouping output by 'bachelor_or_higher' (override with `.groups` argument)
+    ## `summarise()` has grouped output by 'bachelor_or_higher'. You can override using the `.groups` argument.
 
     ## # A tibble: 6 x 4
     ## # Groups:   race [3]
@@ -1975,8 +1977,6 @@ gss_inference_2_2_1_2 %>%
   mutate(prop = count/sum(count)*100)
 ```
 
-    ## `summarise()` ungrouping output (override with `.groups` argument)
-
     ## # A tibble: 2 x 3
     ##   bachelor_or_higher count  prop
     ##   <fct>              <int> <dbl>
@@ -1990,8 +1990,6 @@ gss_inference_2_2_1_3 %>%
   summarise(count = n()) %>% 
   mutate(prop = count/sum(count)*100)
 ```
-
-    ## `summarise()` ungrouping output (override with `.groups` argument)
 
     ## # A tibble: 2 x 3
     ##   bachelor_or_higher count  prop
@@ -2120,7 +2118,7 @@ higher for 2002 than 2012 and p-value is lower for 2002 than 2012.
 library(corrplot)
 ```
 
-    ## corrplot 0.84 loaded
+    ## corrplot 0.90 loaded
 
 ``` r
 corrplot(chisq_2002$residuals, is.cor = FALSE)
